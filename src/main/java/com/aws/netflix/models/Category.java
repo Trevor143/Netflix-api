@@ -26,13 +26,18 @@ public class Category {
     public Category() {
     }
 
-    public Category(@NotNull(message = "Category name is required") String categoryName) {
+
+    public Category(String categoryName) {
         this.categoryName = categoryName;
     }
 
     public Category(@NotNull(message = "Category name is required") String categoryName, Set<Movie> movies) {
         this.categoryName = categoryName;
         this.movies = movies;
+    }
+
+    public Category(Long id) {
+        this.id = id;
     }
 
     public Long getId() {
