@@ -27,7 +27,6 @@ public class MovieController {
         return movieService.findByID(id);
     }
 
-
     @DeleteMapping(value = "{id}")
     String delete(@PathVariable Long id) {
         return movieService.delete(id);

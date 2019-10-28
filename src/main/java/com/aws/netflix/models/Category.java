@@ -19,7 +19,7 @@ public class Category {
     @NotNull(message = "Category name is required")
     private String categoryName;
 
-
+    @JsonIgnore
    @ManyToMany(mappedBy = "category")
     private Set<Movie> movies;
 

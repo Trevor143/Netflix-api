@@ -30,18 +30,6 @@ public class CategoryController {
         return categoryService.findByID(id);
     }
 
-    //find movie by id
-    @GetMapping(value = "/movie/{id}")
-    Optional<Movie> findcatogryMovie(@PathVariable Long id){
-        return categoryService.findMovieinCategories(id);
-    }
-
-    //find movie by id and type
-    @GetMapping(value = "movies/{id}")
-    Optional<Movie> findcategoryMovieandType(@PathVariable Long id, @RequestParam String type){
-        return categoryService.findMovieinCategories(id, type);
-    }
-
     //create
     @PostMapping
     Category create(@Valid @RequestBody Category category){
