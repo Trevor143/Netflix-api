@@ -55,11 +55,18 @@ public class UserController {
         return movieService.create(movie);
     }
 
+    //update a movie
+    @PatchMapping(value = "{userid}/movie/{id}")
+    Movie update(@PathVariable(value = "id") Long id, @PathVariable(value = "userid") Long userid, @RequestBody Movie movie) {
+        return movieService.update(id, userid, movie);
+    }
+
     @DeleteMapping(value = "{id}")
     void delete(@PathVariable Long id, @RequestBody User user) {
          userService.delete(id, user);
     }
 
+    //update a user
     @PatchMapping(value = "{id}")
     User update(@PathVariable Long id, @RequestBody User user) {
         return userService.update(id, user);

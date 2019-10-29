@@ -19,7 +19,7 @@ public interface MovieService {
 
     List<Movie> findByCategoryAndType(Long id, MovieType type);
 
-    public Movie update(Long id, Movie Movie);
+    public Movie update(Long id, Long userid, Movie Movie);
 
     public String delete(Long id);
 

@@ -27,7 +27,7 @@ public class Movie {
     @Column(name = "movie_verified")
     private MovieVerified verified;
 
-    @JsonIgnore
+//    @JsonIgnore
     @ManyToMany
     @JoinTable(name = "movie_category",
     joinColumns = @JoinColumn(name = "movie_id"),

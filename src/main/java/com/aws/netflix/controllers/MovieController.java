@@ -41,9 +41,6 @@ public class MovieController {
         return movieService.delete(id);
     }
 
-    @PatchMapping(value = "{id}")
-    Movie update(@PathVariable Long id, @RequestBody Movie movie) {
-        return movieService.update(id, movie);
-    }
+
 
 }
